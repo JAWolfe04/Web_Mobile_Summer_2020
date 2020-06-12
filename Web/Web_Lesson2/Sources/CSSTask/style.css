@@ -1,0 +1,51 @@
+.color_grid_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Specify height to center vertically */
+    height: 500px;
+}
+
+.color_grid {
+    display: grid;
+    /* Makes a 3x3 grid with each block being 70px x 70px */
+    grid: 70px 70px 70px / 70px 70px 70px;
+    /* Space between blocks works well at 5px */
+    grid-gap: 5px;
+}
+
+.color_grid > #block_1 {
+    background-color: rgba(0, 0, 255, 1.0);
+}
+
+.color_grid > #block_2 {
+    background-color: rgba(0, 0, 0, 1.0);
+}
+
+.color_grid > #block_3 {
+    background-color: rgba(173, 255, 47, 1.0);
+}
+
+.color_grid > #block_4 {
+    background-color: rgba(205, 92, 92, 1.0);
+}
+
+.color_grid > #block_5 {
+    background-color: rgba(128, 128, 128, 1.0);
+}
+
+.color_grid > #block_6 {
+    background-color: rgba(154, 205, 50, 1.0);
+}
+
+.color_grid > #block_7 {
+    background-color: rgba(255, 255, 0, 1.0);
+}
+
+.color_grid > #block_8 {
+    background-color: rgba(238, 130, 238, 1.0);
+}
+
+.color_grid > #block_9 {
+    background-color: rgba(128, 0, 128, 1.0);
+}

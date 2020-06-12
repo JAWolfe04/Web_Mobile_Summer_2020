@@ -31,5 +31,5 @@ HTML <div>, <span> elements and CSS elements
     * The cube should be center-aligned
     * No mandatory of colors (you can choose colors of your like)
 
-![Color Grid]()
+![Color Grid](https://github.com/JAWolfe04/Web_Mobile_Summer_2020/blob/master/Web/Web_Lesson2/Sources/HTMLTask/Color_Grid.png)
 Image II: cube-shaped color grid

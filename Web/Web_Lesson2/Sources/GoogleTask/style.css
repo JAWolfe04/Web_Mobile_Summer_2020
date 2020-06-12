@@ -43,6 +43,24 @@ body {
   background-size: 528px 68px;
 }
 
+#notification-icon {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 30px;
+  height: 30px;
+  background-position: 0px 0px;
+  background-size: 381px 318px;
+}
+
+#user-icon {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 30px;
+  height: 30px;
+  background-position: -30px 0px;
+  background-size: 381px 318px;
+}
+
 #menu-icon:hover {
   opacity: 1;
 }
@@ -61,8 +79,9 @@ body {
 
 .main-content {
   position: relative;
-  width: 450px;
-  height: 250px;
+  /* Increase width and height to handle previous tabs */
+  width: 600px;
+  height: 300px;
   margin: 0 auto;
   top: 25vh;
   display: flex;
@@ -109,7 +128,104 @@ input:focus {
   height: auto;
   z-index: 1;
   bottom: 4px;
-  left: 388px;
+  left: 550px;
+}
+
+/* Defines the previous tabs grid spacing and order */
+.previous_tabs {
+  margin-top: 25px;
+  height: 250px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#previous_1 {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 127px;
+  height: 106px;
+  /* Top row second icon */
+  background-position: -128px 0px;
+  /* Size of the sheet */
+  background-size: 381px 318px;
+}
+
+#previous_2 {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 127px;
+  height: 106px;
+  /* Top row third icon */
+  background-position: -255px 0px;
+  /* Size of the sheet */
+  background-size: 381px 318px;
+}
+
+#previous_3 {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 127px;
+  height: 106px;
+  /* Middle row first icon */
+  background-position: 0px -107px;
+  /* Size of the sheet */
+  background-size: 381px 318px;
+}
+
+#previous_4 {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 127px;
+  height: 106px;
+  /* Middle row second icon */
+  background-position: -128px -107px;
+  /* Size of the sheet */
+  background-size: 381px 318px;
+}
+
+#previous_5 {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 127px;
+  height: 106px;
+  /* Middle row third icon */
+  background-position: -255px -107px;
+  /* Size of the sheet */
+  background-size: 381px 318px;
+}
+
+#previous_6 {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 127px;
+  height: 106px;
+  /* Bottom row first icon */
+  background-position: -0px -213px;
+  /* Size of the sheet */
+  background-size: 381px 318px;
+}
+
+#previous_7 {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 127px;
+  height: 106px;
+  /* Bottom row second icon */
+  background-position: -128px -213px;
+  /* Size of the sheet */
+  background-size: 381px 318px;
+}
+
+#previous_8 {
+  /* Shared sprite sheet is reduce server requests */
+  background-image: url("Icons.png");
+  width: 127px;
+  height: 106px;
+  /* Bottom row third icon */
+  background-position: -255px -213px;
+  /* Size of the sheet */
+  background-size: 381px 318px;
 }
 
 .buttons {
