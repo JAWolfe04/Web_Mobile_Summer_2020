@@ -2,11 +2,13 @@ let ai_choice = 0,
     user_choice = 0;
 
 window.addEventListener('DOMContentLoaded', (event) => {
+    /* Retrieves the dividers from the document that will be manipulated */
     const messages = document.getElementById("rps_messages");
     const buttons = document.getElementById("rps_buttons");
 
     startScreen();
 
+    /* Resets the game */
     function reset() {
         console.log("Resetting game");
         ai_choice = 0;
@@ -15,17 +17,23 @@ window.addEventListener('DOMContentLoaded', (event) => {
         startScreen();
     }
 
+    /* Runs the logic for the game */
     function determineResult(user_selection) {
         console.log("User entered " + user_selection);
+
+        /* AI selection */
         const choices = ["Rock", "Paper", "Scissors"];
         ai_choice = choices[Math.floor(Math.random() * 3)];
         user_choice = user_selection;
+
         console.log("AI choice " + ai_choice);
 
+        /* Handle invalid user selection */
         if(user_choice === 0) {
             console.log("User has not selected an option, resetting");
             reset();
         }
+        /* Logic for the game */
         else {
             if(user_choice === ai_choice) {
                 endScreen("Tied");
@@ -51,6 +59,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     endScreen("Lose");
                 }
             }
+            /* Default error handler */
             else {
                 console.log("Invalid Option, resetting");
                 reset();
@@ -58,11 +67,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
+    /* Creates the Start Screen */
     function startScreen() {
         console.log("Creating Start Screen");
+
+        /* Clear previous elements */
         messages.innerHTML = "";
         buttons.innerHTML = "";
 
+        /* Create Rock, Paper, Scissors Buttons */
         let rock_button = document.createElement("BUTTON");
         let paper_button = document.createElement("BUTTON");
         let scissors_button = document.createElement("BUTTON");
@@ -79,9 +92,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         scissors_button.innerHTML = '<img src="Scissors.png" width="67" height="68" alt="Scissors">';
         scissors_button.onclick = function(){ determineResult("Scissors"); };
 
+        /* Create Instructions */
         let welcome_message = document.createElement("H1");
         welcome_message.innerText = "Please select either Rock, Paper or Scissors";
 
+        /* Create Grid Layout */
         let row1 = document.createElement("DIV");
         let row2 = document.createElement("DIV");
         let col1 = document.createElement("DIV");
@@ -114,6 +129,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         messages.innerHTML = "";
         buttons.innerHTML = "";
 
+        /* Create element to display the results of the game */
         let result_message = document.createElement("H1");
         result_message.innerText = "You " + result;
 
@@ -140,7 +156,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         reset_button.innerText = "Play Again";
         reset_button.onclick = function(){ reset(); };
 
-        // Provide grid formatting
+        // Setup grid layout
         let row1 = document.createElement("DIV");
         let row2 = document.createElement("DIV");
         let row3 = document.createElement("DIV");
