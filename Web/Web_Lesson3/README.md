@@ -12,6 +12,7 @@ The purpose of this task is utilize the components of Bootstrap Grid Layout for 
 8. Make all the elements in the page responsive & align its content as shown in the output sample with the aforementioned using bootstrap
 
 ## Rock, Paper, Scissors Task
+The purpose of this task is to build a Rock, Paper, Scissors game through a dynamic web page using Javascript.
 1. Build the game of rock paper scissors using JavaScript
 2. A basic [UI](https://umkc.app.box.com/s/h2mdl2hmaly7lr0t6h4fz4479146aqy7) with buttons will be necessary
 3. Hint: You can use a random number generator and conditional statements to build the application(by comparing the numbers)
