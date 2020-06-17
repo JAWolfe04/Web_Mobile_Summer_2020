@@ -1,5 +1,4 @@
-let running = true,
-    ai_choice = 0,
+let ai_choice = 0,
     user_choice = 0;
 
 window.addEventListener('DOMContentLoaded', (event) => {
@@ -10,7 +9,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     function reset() {
         console.log("Resetting game");
-        running = true;
         ai_choice = 0;
         user_choice = 0;
 
@@ -97,12 +95,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         col3.className = "col-2 text-center";
         col4.className = "col-2 text-center";
 
-        messages.appendChild(welcome_message);
-
-        buttons.appendChild(rock_button);
-        buttons.appendChild(paper_button);
-        buttons.appendChild(scissors_button);
-
         col1.appendChild(welcome_message);
         col2.appendChild(rock_button);
         col3.appendChild(paper_button);
@@ -145,7 +137,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         let reset_button = document.createElement("BUTTON");
         reset_button.className = "btn btn-secondary";
-        reset_button.innerText = "Try Again";
+        reset_button.innerText = "Play Again";
         reset_button.onclick = function(){ reset(); };
 
         // Provide grid formatting
