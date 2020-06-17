@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.ltgrayText {
+    font-family: Lato;
+    color: #BCBBBB;
+}
+
+.drkGrayText {
+     font-family: Lato;
+     color: #666656;
+}
+
+hr {
+    border-width:5px;
+    margin-top: 0px;
+}
