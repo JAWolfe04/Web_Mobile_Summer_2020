@@ -7,6 +7,8 @@ function upDate(previewPic) {
        to the alt text of the preview image
        */
 
+    $("#image").css('background-image', 'url(' + previewPic.src + ')');
+    $("#image").text(previewPic.alt);
 }
 
 function unDo() {
@@ -18,4 +20,6 @@ function unDo() {
    back to the original text.  You can use the html code to see what that original text was
    */
 
+    $("#image").css('background-image', '');
+    $("#image").text('Hover over an image below to display here.');
 }
