@@ -1,0 +1,19 @@
+.usernames {
+    font-weight: 600;
+    font-size: 16px
+}
+
+.user_bio {
+    font-size: 14px;
+    color: #24292e;
+}
+
+.user_info {
+    color: #586069;
+    font-size: 12px;
+}
+
+.total_user_style {
+    font-weight: 600;
+    font-size: 20px;
+}

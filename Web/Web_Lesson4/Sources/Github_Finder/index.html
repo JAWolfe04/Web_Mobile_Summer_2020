@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Github User Finder</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Custom Styling -->
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Github User Search</h1>
+        <div class="row  mb-3 mt-3">
+            <div class="col-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="username" placeholder="Enter a github username">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" id="search_button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="results"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
