@@ -1,0 +1,39 @@
+.heading_style {
+  color: white;
+  text-align: center;
+}
+
+.timer_numbers {
+  font-size: 10vw;
+  color: white;
+  text-align: center;
+  line-height: 9vw;
+  margin-bottom: 0px;
+}
+
+.timer_units {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: max(2vw, 12px);
+  margin-bottom: 0px;
+}
+
+.timer_date {
+  color: white;
+  text-align: center;
+  font-size: max(2vw, 12px);
+  font-weight: bold;
+}
+
+.rule_gradient {
+  height: 7px;
+  background-image: linear-gradient(darkblue, dodgerblue);
+  background-repeat: no-repeat;
+}
+
+.grad_border {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-image: linear-gradient(to bottom, transparent, white, transparent) 1 100%;
+}
