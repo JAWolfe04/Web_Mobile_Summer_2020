@@ -8,28 +8,31 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  // define list of items
+  // list of items
   items = [];
+  // User's task entry
   submission: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    // Remove background image added from the countdown clock
+    // and set the background color to white
     document.body.style.backgroundImage = '';
     document.body.style.backgroundColor = 'white';
   }
 
-  // Write code to push new item
+  // Adds new item to items list
   submitNewItem() {
     this.items.push([this.submission, false]);
   }
 
-  // Write code to complete item
+  // Marks items as complete
   completeItem(index) {
     this.items[index][1] = true;
   }
 
-  // Write code to delete item
+  // Deletes item from items list
   deleteItem(index) {
     this.items.splice(index, 1);
   }
