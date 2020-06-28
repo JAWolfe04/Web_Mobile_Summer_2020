@@ -1,0 +1,10 @@
+.panel-heading {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: lightgreen;
+}
+
+.venue_catagory {
+  font-style: italic;
+  color: darkgray;
+}

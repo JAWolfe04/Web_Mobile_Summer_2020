@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col">
+    <h1 class="text-center">Search for a Recipe</h1>
+    <div class="input-group mb-4">
+      <input class="form-control" placeholder="Recipe name" type="text" [(ngModel)]="recipeValue" (keyup)="setRecipes()">
+      <button (click)="getRecipes()" class="btn btn-primary" type="button">Search</button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div *ngFor="let recipe of recipeList">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-4">
+              <a href="{{recipe.recipe.url}}">
+                <img class="img-fluid thumbnail" src="{{recipe.recipe.image}}"/>
+              </a>
+            </div>
+            <div class="col-sm-8">
+              <a href="{{recipe.recipe.url}}" class="label">{{ recipe.recipe.label }}</a>
+              <div>{{recipe.recipe.source}}</div>
+              <div *ngIf="recipe.recipe.totalTime > 0">Total Time: {{recipe.recipe.totalTime}} minutes</div>
+
+              <div>{{recipe.recipe.yield}} servings</div>
+              <div>
+                <span *ngIf="recipe.recipe.ingredients[0].text">Ingredients: {{recipe.recipe.ingredients[0].text}}</span>
+                <span *ngFor="let ingredient of recipe.recipe.ingredients; index as i">
+                  <span *ngIf="i != 0">, {{ingredient.text}}</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

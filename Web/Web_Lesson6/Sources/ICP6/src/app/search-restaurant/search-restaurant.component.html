@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col">
+    <h1 class="text-center">Search for a Restaurant</h1>
+    <div class="input-group mb-4">
+      <input class="form-control" placeholder="Recipe name" type="text" [(ngModel)]="recipeValue" (keyup)="setRecipes()">
+      <input class="form-control" placeholder="Place" type="text" [(ngModel)]="placeValue">
+      <button (click)="getVenues()" class="btn btn-primary" type="button">Search</button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div *ngFor="let venue of venueList">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ venue.name }}</h5>
+          <div class="row">
+            <div class="col-md-10">
+              <div class="venue_catagory" *ngFor="let category of venue.categories">
+                {{category.shortName}}
+              </div>
+              <address>
+                {{venue.location.formattedAddress[0]}}<br>
+                {{venue.location.formattedAddress[1]}}<br>
+                {{venue.location.formattedAddress[2]}}
+              </address>
+            </div>
+            <div class="col-md-2">
+              <a href="http://maps.google.com/maps?saddr={{currentLat}},{{currentLong}}
+                    &daddr={{venue.location.formattedAddress[0]}},
+                           {{venue.location.formattedAddress[1]}},
+                           {{venue.location.formattedAddress[2]}}">
+                <img src="../../assets/google.png" style="width: 30px; height: 30px;"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.label {
+  font-family: Georgia;
+  font-size: 21px;
+  color: black;
+  font-weight: bolder;
+}
+
+.desc {
+  font-family: Georgia;
+  font-size: 17px;
+}
+
+.thumbnail {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.thumbnail:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+}
