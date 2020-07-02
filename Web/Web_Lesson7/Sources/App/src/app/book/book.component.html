@@ -1,0 +1,23 @@
+<div class="row my-3">
+  <div class="col">
+    <button type="button" class="btn btn-primary" routerLink="/book-create">Add Book</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ISBN</th><th>Title</th><th>Author</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of books" routerLink="/book-details/{{book._id}}">
+        <td>{{book.isbn}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+</div>
