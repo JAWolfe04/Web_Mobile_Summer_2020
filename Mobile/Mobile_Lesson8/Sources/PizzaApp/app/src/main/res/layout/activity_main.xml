@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <EditText
+        android:id="@+id/editTextCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/customer_name_hint"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:id="@+id/scrollViewOptions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutQuantity"
+        android:layout_below="@id/editTextCustomer"
+        android:fadeScrollbars="false">
+
+        <LinearLayout
+            android:id="@+id/layoutPizzaOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textSizeOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_size_crust"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPizzaSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_size"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPizzaSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_small"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPizzaMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_medium"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPizzaLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_large"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioGroupPizzaCrust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_crust"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPizzaHandToss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_hand_tossed"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPizzaDeepDish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_deep_dish"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPizzaThin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_thin_crust"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textCheeseSauceOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_cheese_sauce"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textPizzaCheese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_cheese"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerPizzaCheese"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/cheese_options"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textPizzaSauce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pizza_sauce"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerPizzaSauce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/sauce_options"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textToppingsOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_toppings"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxHam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_ham" />
+
+            <CheckBox
+                android:id="@+id/checkBoxBeef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_beef" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPepperoni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_pepperoni" />
+
+            <CheckBox
+                android:id="@+id/checkBoxSausage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_sausage" />
+
+            <CheckBox
+                android:id="@+id/checkBoxOnions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_onions" />
+
+            <CheckBox
+                android:id="@+id/checkBoxGreenPepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_green_pepper" />
+
+            <CheckBox
+                android:id="@+id/checkBoxBlackOlive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_black_olive" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPineapple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_pineapple" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMushroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_mushrooms" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutPurchase"
+        android:orientation="horizontal"
+        android:id="@+id/layoutQuantity"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/textQuantityHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pizza_quantity_heading"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonDecrement"
+            android:text="-"
+            android:onClick="DecrementQuantity"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textQuantity"
+            android:text="@string/pizza_quantity"
+            android:paddingHorizontal="32dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonIncrement"
+            android:text="+"
+            android:onClick="IncrementQuantity"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPurchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonOrder"
+            android:text="@string/pizza_order"
+            android:onClick="makeOrder"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:id="@+id/buttonSummary"
+            android:text="@string/pizza_summary"
+            android:onClick="makeSummary"/>
+    </LinearLayout>
+</RelativeLayout>

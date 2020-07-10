@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Pizza App</string>
+    <string name="pizza_size_crust">Size and Crust</string>
+    <string name="customer_name_hint">Enter your Name</string>
+    <string name="pizza_small">10\" Small</string>
+    <string name="pizza_medium">12\" Medium</string>
+    <string name="pizza_large">14\" Large</string>
+    <string name="pizza_size">Size:</string>
+    <string name="pizza_crust">Crust:</string>
+    <string name="pizza_hand_tossed">Hand Tossed</string>
+    <string name="pizza_deep_dish">Deep Dish</string>
+    <string name="pizza_thin_crust">Thin</string>
+    <string name="pizza_cheese_sauce">Cheese and Sauce</string>
+    <string name="pizza_cheese">Cheese:</string>
+    <string-array name="cheese_options">
+        <item>No</item>
+        <item>Light</item>
+        <item>Normal</item>
+        <item>Extra</item>
+    </string-array>
+    <string name="pizza_sauce">Sauce:</string>
+    <string-array name="sauce_options">
+        <item>No</item>
+        <item>Tomato</item>
+        <item>Marinara</item>
+        <item>Alfredo</item>
+        <item>Parmesan</item>
+        <item>BBQ</item>
+    </string-array>
+    <string name="pizza_ham">Ham</string>
+    <string name="pizza_toppings">Toppings</string>
+    <string name="pizza_beef">Beef</string>
+    <string name="pizza_pepperoni">Pepperoni</string>
+    <string name="pizza_sausage">Sausage</string>
+    <string name="pizza_onions">Onions</string>
+    <string name="pizza_green_pepper">Green Pepper</string>
+    <string name="pizza_black_olive">Black Olives</string>
+    <string name="pizza_mushrooms">Mushrooms</string>
+    <string name="pizza_pineapple">Pineapple</string>
+    <string name="pizza_summary">SUMMARY</string>
+    <string name="pizza_order">ORDER</string>
+    <string name="pizza_quantity_heading">Quantity:</string>
+    <string name="pizza_quantity" translatable="false">1</string>
+    <string name="pizza_too_few">Cannot have less than 1</string>
+    <string name="pizza_pricing">$5.99 for small, $7.99 for medium, $9.99 for large\n
+        $0.50 for light, $1 for normal, $1.50 for extra cheese\n
+                      $0.50 per topping</string>
+</resources>

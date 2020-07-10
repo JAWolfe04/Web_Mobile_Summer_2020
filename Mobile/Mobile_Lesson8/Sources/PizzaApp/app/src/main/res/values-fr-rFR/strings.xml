@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pizza App</string>
+    <string name="pizza_size_crust">Taille et Croûte</string>
+    <string name="customer_name_hint">Entrez votre Nom</string>
+    <string name="pizza_small">10\" Petite</string>
+    <string name="pizza_medium">12\" Moyen</string>
+    <string name="pizza_large">14\" Grande</string>
+    <string name="pizza_size">Taille:</string>
+    <string name="pizza_crust">" Croûte:"</string>
+    <string name="pizza_hand_tossed">Jeté à la Main</string>
+    <string name="pizza_deep_dish">Plat Profond</string>
+    <string name="pizza_thin_crust">Mince</string>
+    <string name="pizza_cheese_sauce">" Fromage et Sauce"</string>
+    <string name="pizza_cheese">" Fromage:"</string>
+    <string-array name="cheese_options">
+        <item>Non</item>
+        <item>Peu</item>
+        <item>Ordinaire</item>
+        <item>Supplémentaire</item>
+    </string-array>
+    <string name="pizza_sauce">Sauce:</string>
+    <string-array name="sauce_options">
+        <item>Non</item>
+        <item>Tomate</item>
+        <item>Marinara</item>
+        <item>Alfredo</item>
+        <item>Parmesan</item>
+        <item>BBQ</item>
+    </string-array>
+    <string name="pizza_ham">Jambon</string>
+</resources>
