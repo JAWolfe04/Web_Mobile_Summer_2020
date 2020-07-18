@@ -2,6 +2,15 @@ package com.webmobile.earthquakeinfoapp;
 
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,19 +39,52 @@ public class QueryUtils {
         URL url = null;
         // A string to store the response obtained from rest call in the form of string
         String jsonResponse = "";
+        HttpURLConnection urlConnection = null;
         try {
             //TODO: 1. Create a URL from the requestUrl string and make a GET request to it
-            //TODO: 2. Read from the Url Connection and store it as a string(jsonResponse)
-                /*TODO: 3. Parse the jsonResponse string obtained in step 2 above into JSONObject to extract the values of
-                        "mag","place","time","url"for every earth quake and create corresponding Earthquake objects with them
-                        Add each earthquake object to the list(earthquakes) and return it.
-                */
+            url = new URL(requestUrl);
+            urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setReadTimeout(10000);
+            urlConnection.setConnectTimeout(15000);
+            urlConnection.setRequestMethod("GET");
+            urlConnection.connect();
 
-            // Return the list of earthquakes
+            int code = urlConnection.getResponseCode();
+            if(code != 200)
+                Log.e(LOG_TAG, "Invalid Response:  " + code);
+
+            //TODO: 2. Read from the Url Connection and store it as a string(jsonResponse)
+            BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+            String line;
+            while((line = reader.readLine()) != null)
+                jsonResponse += line;
+
+            /*TODO: 3. Parse the jsonResponse string obtained in step 2 above into JSONObject to extract the values of
+                    "mag","place","time","url"for every earth quake and create corresponding Earthquake objects with them
+                    Add each earthquake object to the list(earthquakes) and return it.
+            */
+            try {
+                JSONObject jsonObject = new JSONObject(jsonResponse);
+                JSONArray jsonArray = jsonObject.getJSONArray("features");
+                for(int i = 0; i < jsonArray.length(); ++i) {
+                    JSONObject prop = jsonArray.getJSONObject(i).getJSONObject("properties");
+                    earthquakes.add(new Earthquake(
+                            prop.getDouble("mag"),
+                            prop.getString("place"),
+                            prop.getLong("time"),
+                            prop.getString("url")));
+                }
+            } catch (JSONException e) {
+                Log.e(LOG_TAG, "JSON Exception:  ", e);
+            }
 
         } catch (Exception e) {
             Log.e(LOG_TAG, "Exception:  ", e);
+        } finally {
+            if(urlConnection != null)
+                urlConnection.disconnect();
         }
+
         // Return the list of earthquakes
         return earthquakes;
     }

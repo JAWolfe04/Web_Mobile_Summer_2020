@@ -2,6 +2,7 @@ package com.webmobile.earthquakeinfoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -32,7 +33,7 @@ public class EarthquakeActivity extends AppCompatActivity {
         setContentView(R.layout.earthquake_activity);
 
         // Find a reference to the {@link ListView} in the layout
-        ListView earthquakeListView = (ListView) findViewById(R.id.list);
+        ListView earthquakeListView =findViewById(R.id.list);
 
         // Create a new adapter that takes an empty list of earthquakes as input
         mAdapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());
@@ -53,7 +54,9 @@ public class EarthquakeActivity extends AppCompatActivity {
                 Uri earthquakeUri = Uri.parse(currentEarthquake.getUrl());
 
                 //TODO: 4. Create a new intent to view the earthquake URI.Send the intent to launch a new activity
-
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(earthquakeUri);
+                startActivity(intent);
             }
         });
 
