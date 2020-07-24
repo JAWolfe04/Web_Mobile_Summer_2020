@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ICP13</string>
+    <string name="hint">Tap on mic to start</string>
+    <string name="record_desc">Record Message</string>
+</resources>
